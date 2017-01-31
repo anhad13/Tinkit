@@ -1,2 +1,2 @@
 # Tinkit
-Android app for production recommendations
+Android app for product recommendations
