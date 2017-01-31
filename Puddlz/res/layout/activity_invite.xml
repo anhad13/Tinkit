@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    
+    tools:context="com.puddlz.Invite$PlaceholderFragment"
+    android:background="@color/light_red" >
+  
+ 
+    
+    <Button
+        android:id="@+id/invite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/button_custom2"
+        android:text="Invite Facebook Friends"
+        android:padding="4dp"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:typeface="serif" />
+    
+
+     <Button
+            android:id="@+id/skip"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/button_custom2"
+            android:padding="0dp"
+            android:layout_alignParentBottom="true"
+            android:text="Next" 
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff" />
+
+      <TextView
+      android:id="@+id/textView1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_above="@id/invite"
+      android:layout_centerHorizontal="true"
+      android:gravity="center"
+      android:layout_marginBottom="30dp"
+      android:text="To make the most of Puddlz,we recommend you invite your friends."
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:textColor="@color/app_blue"
+      android:textStyle="bold"
+      android:typeface="serif" />
+   
+
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ask_horizontal_margin"
+        android:layout_marginRight="@dimen/ask_horizontal_margin"
+        android:layout_marginTop="@dimen/ask_vertical_margin"
+        android:layout_marginBottom="@dimen/ask_vertical_margin"
+        android:background="#ffffff" >
+
+        <ImageView
+            android:id="@+id/ask_image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="content_desc"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            
+            android:src="@drawable/m5_electronic" />
+        
+        <TextView
+            android:id="@+id/ask_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="8dp"
+            android:text="Medium Text"
+           android:layout_toLeftOf="@id/ask_image"
+            android:maxLines="1"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/ask_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/ask_text"
+            android:layout_marginLeft="8dp"
+            android:layout_toLeftOf="@id/ask_image"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:text="tada"
+            android:textSize="18sp" />
+
+        
+        
+        </RelativeLayout>
+
+</LinearLayout>

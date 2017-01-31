@@ -1,0 +1,115 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.puddlz2.New_electronic"
+    tools:ignore="MergeRootFrame" >
+
+    <LinearLayout
+        android:id="@+id/linearlayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.50"
+            android:background="#ff0000"
+            android:onClick="goto_feed"
+            android:padding="0dp"
+            android:text="@string/post"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.50"
+            android:background="#ff0000"
+            android:onClick="clear"
+            android:padding="0dp"
+            android:text="@string/clear"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="Ask here" />
+
+    <LinearLayout
+        android:id="@+id/linearlayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        
+        <CheckBox
+            android:id="@+id/check_location"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:onClick="add_location"
+            android:text="Add location"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlayout3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="2dp" >
+
+        <TextView
+            android:id="@+id/text_location"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:textColor="#ff0000"
+            android:paddingBottom="2dp"
+            android:text="TextView"
+            android:visibility="gone"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/radio1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_custom2"
+            android:onClick="radio2"
+            android:textColor="#ffffff"
+            android:padding="0dp"
+            android:text="\nPlease give reviews for --? Is it worth a watch?\n" />
+
+        <Button
+            android:id="@+id/radio2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_custom2"
+            android:onClick="radio3"
+            android:textColor="#ffffff"
+            android:padding="0dp"
+            android:text="\nCan you give me some quick movie suggestions?\n" />
+
+        <Button
+            android:id="@+id/radio0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_custom2"
+            android:onClick="radio1"
+            android:textColor="#ffffff"
+            android:padding="0dp"
+            android:text="\nAny good movies in theaters currently? Anyone want to join me?\n" />
+    </LinearLayout>
+
+</LinearLayout>

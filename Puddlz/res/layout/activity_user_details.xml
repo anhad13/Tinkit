@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.puddlz.UserDetailsActivity$PlaceholderFragment" >
+    
+   <LinearLayout
+       android:id="@+id/linearlayout_user_details"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:layout_alignParentTop="true"
+       android:layout_alignParentLeft="true"
+        >
+       <ImageView
+        android:id="@+id/imagep2"
+         android:layout_width="120dp"
+        android:layout_height="120dp"
+         android:layout_gravity="center"
+        android:src="@drawable/profile_default"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal" 
+        android:scaleType="fitXY"
+         />
+       
+       
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Name"
+        android:textSize="20sp"
+        android:typeface="serif" />
+    
+    <TextView
+        android:id="@+id/userGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="Gender"
+        android:textSize="20sp"
+        android:typeface="serif" />
+
+    <TextView
+        android:id="@+id/userEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="Email"
+        android:textSize="20sp"
+        android:typeface="serif" />
+    
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlayout_continue"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+         >
+
+        
+ 
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.50"
+            android:background="@drawable/button_custom2"
+            android:padding="0dp"
+            android:text="@string/continue_label" 
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff" />
+
+    </LinearLayout>
+    
+    
+
+</RelativeLayout>

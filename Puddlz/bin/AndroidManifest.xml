@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.puddlz"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <permission
+        android:name="com.puddlz.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.puddlz.permission.C2D_MESSAGE" />
+
+    <application
+        android:name="com.puddlz.PuddlzApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Puddlz" >
+        <activity
+            android:name="com.puddlz.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="app_id" />
+
+        <activity
+            android:name="com.facebook.LoginActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.puddlz.Home"
+            android:label="@string/title_activity_home"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.puddlz.New_Electronic"
+            android:label="@string/title_activity_new__electronic"
+            android:parentActivityName="com.puddlz.Ask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.puddlz.Ask" />
+        </activity>
+        <activity
+            android:name="com.puddlz.Answers"
+            android:label="@string/title_activity_answers"
+            android:screenOrientation="portrait"
+           
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+
+        <service android:name="com.parse.PushService" />
+
+        <receiver android:name="com.parse.ParseBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.puddlz" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.parse.ParsePushBroadcastReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.puddlz.Notifications"
+            android:label="@string/title_activity_notifications"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.puddlz.Ask"
+            android:label="@string/title_activity_ask"
+            android:parentActivityName="com.puddlz.Home"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.puddlz.Home" />
+        </activity>
+        <activity
+            android:name="com.puddlz.Questions"
+            android:label="@string/title_activity_questions"
+            android:parentActivityName="com.puddlz.Ask"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.puddlz.Ask" />
+        </activity>
+        <activity
+            android:name="com.puddlz.UserDetailsActivity"
+            android:label="@string/title_activity_user_details"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.puddlz.EditFriendsActivity"
+            android:label="@string/title_activity_edit_friends"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.puddlz.ProfilePage"
+            android:label="@string/title_activity_profile_page"
+            android:parentActivityName="com.puddlz.HOME"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.puddlz.HOME" />
+        </activity>
+        <activity
+            android:name="com.puddlz.AskAdapter"
+            android:label="@string/title_activity_ask_adapter"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.puddlz.Doctor"
+            android:label="@string/title_activity_doctor"
+            android:parentActivityName="com.puddlz.Ask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.puddlz.Ask" />
+        </activity>
+        <activity
+            android:name="com.puddlz.Restaurant"
+            android:label="@string/title_activity_restaurant"
+            android:parentActivityName="com.puddlz.Ask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.puddlz.Ask" />
+        </activity>
+        <activity
+            android:name="com.puddlz.Other"
+            android:label="@string/title_activity_other"
+            android:parentActivityName="com.puddlz.Ask"
+            android:screenOrientation="portrait" 
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.puddlz.Ask" />
+        </activity>
+        <activity
+            android:name="com.puddlz.Movies"
+            android:label="@string/title_activity_movies"
+            android:parentActivityName="com.puddlz.Ask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.puddlz.Ask" />
+        </activity>
+        <activity
+            android:name="com.puddlz.Apps"
+            android:label="@string/title_activity_apps"
+            android:parentActivityName="com.puddlz.Ask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.puddlz.Ask" />
+        </activity>
+        <activity
+            android:name="com.puddlz.Invite"
+            android:label="@string/title_activity_invite"
+            android:screenOrientation="portrait"  >
+        </activity>
+    </application>
+
+</manifest>
